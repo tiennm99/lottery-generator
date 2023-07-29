@@ -1,8 +1,8 @@
 package dev.miti99.lotterygenerator;
 
-import java.util.List;
+import java.util.Set;
 
 public interface LotteryGenerator {
 
-  List<Integer> generateNumbers(int numNumber);
+  Set<Integer> generateNumbers(int numNumber);
 }

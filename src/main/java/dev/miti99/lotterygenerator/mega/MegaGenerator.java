@@ -2,7 +2,11 @@ package dev.miti99.lotterygenerator.mega;
 
 import dev.miti99.lotterygenerator.LotteryGenerator;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
@@ -26,11 +30,11 @@ public class MegaGenerator implements LotteryGenerator {
   }
 
   @Override
-  public List<Integer> generateNumbers(int numNumber) {
+  public Set<Integer> generateNumbers(int numNumber) {
     var baseNumbers = generateBaseNumbers();
-    var result = new ArrayList<Integer>(numNumber);
+    var result = new TreeSet<Integer>();
     for (int i = 0; i < numNumber; i++) {
-      var index = (int) (Math.random() * baseNumbers.size());
+      var index = ThreadLocalRandom.current().nextInt(baseNumbers.size());
       result.add(baseNumbers.get(index));
       baseNumbers.remove(index);
     }

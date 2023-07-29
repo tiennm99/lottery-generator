@@ -1,6 +1,6 @@
 package dev.miti99.lotterygenerator.mega;
 
-import java.util.List;
+import java.util.Set;
 
 public class BasePresetGenerator extends MegaGenerator {
 
@@ -11,7 +11,7 @@ public class BasePresetGenerator extends MegaGenerator {
     this.numNumber = numNumber;
   }
 
-  public List<Integer> generateNumbers() {
+  public Set<Integer> generateNumbers() {
     return generateNumbers(numNumber);
   }
 }

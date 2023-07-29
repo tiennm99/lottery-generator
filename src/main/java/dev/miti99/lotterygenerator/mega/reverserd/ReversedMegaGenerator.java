@@ -2,6 +2,8 @@ package dev.miti99.lotterygenerator.mega.reverserd;
 
 import dev.miti99.lotterygenerator.mega.BasePresetGenerator;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class ReversedMegaGenerator extends BasePresetGenerator {
 
@@ -10,9 +12,10 @@ public class ReversedMegaGenerator extends BasePresetGenerator {
   }
 
   @Override
-  public List<Integer> generateNumbers(int numNumber) {
+  public Set<Integer> generateNumbers(int numNumber) {
     var baseNumbers = generateBaseNumbers();
     var removedNumbers = super.generateNumbers(getTotalNumber() - numNumber);
-    return baseNumbers.stream().filter(n -> !removedNumbers.contains(n)).toList();
+    return baseNumbers.stream().filter(n -> !removedNumbers.contains(n))
+        .collect(Collectors.toSet());
   }
 }
