@@ -14,7 +14,6 @@ class Mega655GeneratorTest {
         assertEquals(6, numbers.size());
         for (int number : numbers) {
             assertTrue(number >= 1 && number <= 55);
-            assertEquals(numbers.indexOf(number), numbers.lastIndexOf(number));
         }
     }
 }

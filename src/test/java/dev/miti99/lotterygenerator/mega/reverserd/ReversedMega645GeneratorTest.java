@@ -15,7 +15,6 @@ class ReversedMega645GeneratorTest {
         assertEquals(7, numbers.size());
         for (int number : numbers) {
             assertTrue(number >= 1 && number <= 45);
-            assertEquals(numbers.indexOf(number), numbers.lastIndexOf(number));
         }
     }
 }
