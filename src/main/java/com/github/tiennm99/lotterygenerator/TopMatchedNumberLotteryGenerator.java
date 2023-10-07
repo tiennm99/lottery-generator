@@ -8,16 +8,16 @@ import java.util.TreeMap;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Collectors;
 
-public class TopMatchedLotteryGenerator implements LotteryGenerator {
+public class TopMatchedNumberLotteryGenerator implements LotteryGenerator {
 
   public static final int DEFAULT_MATCH_TIME = 1_000_000;
   private final int matchTime;
 
-  public TopMatchedLotteryGenerator(int matchTime) {
+  public TopMatchedNumberLotteryGenerator(int matchTime) {
     this.matchTime = matchTime;
   }
 
-  public TopMatchedLotteryGenerator() {
+  public TopMatchedNumberLotteryGenerator() {
     this(DEFAULT_MATCH_TIME);
   }
 

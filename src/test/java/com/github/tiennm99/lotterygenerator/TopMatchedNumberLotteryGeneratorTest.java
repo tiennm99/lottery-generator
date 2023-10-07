@@ -5,11 +5,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-class TopMatchedLotteryGeneratorTest {
+class TopMatchedNumberLotteryGeneratorTest {
 
   @Test
   void testMega645() {
-    var generator = new TopMatchedLotteryGenerator();
+    var generator = new TopMatchedNumberLotteryGenerator();
     var numbers = generator.generateNumbers(45, 6);
     System.out.println(numbers);
     assertEquals(6, numbers.size());
@@ -20,7 +20,7 @@ class TopMatchedLotteryGeneratorTest {
 
   @Test
   void testMega655() {
-    var generator = new TopMatchedLotteryGenerator();
+    var generator = new TopMatchedNumberLotteryGenerator();
     var numbers = generator.generateNumbers(55, 6);
     System.out.println(numbers);
     assertEquals(6, numbers.size());
