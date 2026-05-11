@@ -26,4 +26,4 @@ Done
 
 ## Original Python Version
 
-*In 2025, I rewrote this project using Go. The original Python version of this project can be found at [feature/python](https://github.com/tiennm99/go-lottery-generator/tree/feature/python) branch.*
+*In 2025, I rewrote this project using Go. The original Python version of this project can be found at [feature/python](https://github.com/tiennm99/lottery-generator/tree/feature/python) branch.*
